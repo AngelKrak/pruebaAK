@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina Prueba By AngelKrak</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+</head>
+
+<body>
+  <!-- Menu -->
+  <div class="ui pointing attached stackable menu">
+    <a class="active item">
+    Home
+  </a>
+    <a class="item" href="http://www.heroesdelaweb.com/members/angelkrak.1363/">
+    Perfil en HDLW
+  </a>
+    <a class="item" href="https://www.facebook.com/AngelKrak92">
+    Mi Facebook
+  </a>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Buscar...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido -->
+  <div class="ui container segment compact stacked">
+    <h2 class="ui header">Tutorial By AngelKrak</h2>
+    <div class="ui two column grid">
+      <div class="row">
+        <div class="column">
+          <div class="ui link cards">
+            <div class="card">
+              <div class="image">
+                <img src="http://img13.deviantart.net/5f1d/i/2016/112/3/f/bloody_butterfly__ver_1____anime_render_by_mikushooter-d6gd96m.png">
+              </div>
+              <div class="content">
+                <div class="header">By AngelKrak</div>
+                <div class="meta">
+                  <a>Angel Komander</a>
+                </div>
+                <div class="description">
+                  Freelancer de Mexico
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+        Joined in 2015
+      </span>
+                <span>
+        <i class="user icon"></i>
+        5000+ Friends
+      </span>
+              </div>
+              <a class="ui bottom attached button" href="#">
+                <i class="add icon"></i> Ir al Tutorial
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <form class="ui form">
+            <div class="field">
+              <label>Nombre</label>
+              <div class="ui left icon input">
+                <input type="text" name="nombre" placeholder="Nombre">
+                <i class="user icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <label>Imagen</label>
+              <div class="ui left icon input">
+                <input type="text" name="imagen" placeholder="Imagen">
+                <i class="image icon"></i>
+              </div>
+            </div>
+            <button class="ui primary button" type="button"><i class="icon send"></i> Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script>
+    $(".ui.button").click(function() {
+      var nombre = $("input[name='nombre']").val();
+      var imagen = $("input[name='imagen']").val();
+      
+      $(".card .header, .card .meta").html(nombre);
+      $(".card .image img").attr("src", imagen);
+    });
+  </script>
+</body>
+
+</html>
